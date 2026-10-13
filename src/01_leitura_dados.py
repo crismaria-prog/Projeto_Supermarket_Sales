@@ -14,6 +14,15 @@ print(df_vendas.isna().sum()) # para confirmar a quantidade exata de valores nul
 
 # A verificação de valores nulos retornou 0 para todas as colunas. Portanto, não possui valores ausentes
 
+print(df_vendas.duplicated().sum())
+print(df_vendas['Invoice ID'].duplicated().sum())
+
+# Não há valores duplicados no dataframe, nem na coluna invoice id. Portanto, não é necessário realizar a remoção de valores duplicados.
+
+print(df_vendas.describe())
+print(df_vendas['Date'].head())
 
 
-
+datas_convertidas = pd.to_datetime(df_vendas['Date'], format='%m/%d/%Y')
+print(datas_convertidas.min().strftime("%d/%m/%Y"))
+print(datas_convertidas.max().strftime("%d/%m/%Y"))
