@@ -1,5 +1,5 @@
 import pandas as pd
-df_vendas = pd.read_csv('Supermarket Analysis.csv')
+df_vendas = pd.read_csv('data/raw/SuperMarket Analysis.csv')
 print(df_vendas.columns)
 print(df_vendas.head())
 print(df_vendas.shape)
